@@ -39,7 +39,7 @@ window.onload =  function inicio() {
 			guardarFoto();
 		});
 	} 
-	/*
+	
          var app={
 	     inicio function(){
 		  //this.iniciaFastClick();
@@ -120,4 +120,4 @@ window.onload =  function inicio() {
 
 };
 app.inicio();
-*/
+
