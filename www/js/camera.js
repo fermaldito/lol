@@ -2,6 +2,7 @@ window.onload =  function inicio() {
 	iniciaBoton();
 	iniciaFastClick();
 	
+	
 	function iniciaFastClic(){			
 		if('addEventListener' in document){				
 			document.addEventListener('DOMContentLoaded',
@@ -38,7 +39,38 @@ window.onload =  function inicio() {
 			guardarFoto();
 		});
 	} 
-	
+	/*
+         var app={
+	     inicio function(){
+		  //this.iniciaFastClick();
+		  this.iniciaBoton();
+	},
+	iniciaFastClick: function(){
+		FastClick.attach(docuement.body);
+	},
+	iniciaBoton: function(){
+		var ButtonAction=document.querySelector('#button-action');
+		ButtonAction.addEventListener('click',this.tomarFoto);
+	},
+	tomarFoto: function(){
+		var opciones={
+			quality: 100,
+			cameraDirection: 0,
+			navigator.camera.getPicture(onPhotoDataSuccess
+			destinationType: Camera.DestinationType.FILE_URI,
+			targetWidth: 300,
+			targetHeight:300,
+			correctOrientation: true
+		};
+		navigator.camera.getPicture(app.fotoTomada,app.errorAlTomarFoto,opciones);
+	},
+	fotoTomada: function(imageURI){
+		var image = docuement.querySelector('#foto');
+		image.src=imageURI;
+	},
+	errorAlTomarFoto: function(){
+		conole.log('Fallo al tomar foto o toma cancelada: '+ message);
+	}	
 	function cargarFoto(pictureSourceType){		
 		var opciones={
 			quality: 100,
@@ -85,38 +117,7 @@ window.onload =  function inicio() {
 
 }
 
-/*
-var app={
-	inicio function(){
-		//this.iniciaFastClick();
-		this.iniciaBoton();
-	},
-	iniciaFastClick: function(){
-		FastClick.attach(docuement.body);
-	},
-	iniciaBoton: function(){
-		var ButtonAction=document.querySelector('#button-action');
-		ButtonAction.addEventListener('click',this.tomarFoto);
-	},
-	tomarFoto: function(){
-		var opciones={
-			quality: 100,
-			cameraDirection: 0,
-			navigator.camera.getPicture(onPhotoDataSuccess
-			destinationType: Camera.DestinationType.FILE_URI,
-			targetWidth: 300,
-			targetHeight:300,
-			correctOrientation: true
-		};
-		navigator.camera.getPicture(app.fotoTomada,app.errorAlTomarFoto,opciones);
-	},
-	fotoTomada: function(imageURI){
-		var image = docuement.querySelector('#foto');
-		image.src=imageURI;
-	},
-	errorAlTomarFoto: function(){
-		conole.log('Fallo al tomar foto o toma cancelada: '+ message);
-	}	
+
 };
 app.inicio();
 */
